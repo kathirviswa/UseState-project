@@ -1,9 +1,10 @@
-import './App.jsx';
+
 const QrCode = () => {
     return (
       <div className="App-container">
         <div className="Input">
-          <label htmlFor="dataInput" className="input-label">
+        
+         <label htmlFor="dataInput" className="input-label">
             Enter a text to generate QR Code :
           </label>
           <input type="text"
@@ -12,7 +13,6 @@ const QrCode = () => {
             placeholder="Enter Data for QR Code Number"
           />
      
-    
           <label htmlFor="dataInput" className="input-label">
             Size of the QR Code (in pixels e.g.,: 150) :
           </label>
