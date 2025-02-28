@@ -1,13 +1,14 @@
-import QRCode from './QRCode'
+
 
 import './App.css'
+import QrCode from './QRCode'
 
 function App() {
   
 
   return (
     <>
-     <QRCode/>
+    <QrCode/>
        
     </>
   )
