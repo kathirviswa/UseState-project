@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import QRCode from './QRCode'
 
 import './App.css'
 
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-     
+     <QRCode/>
        
     </>
   )
