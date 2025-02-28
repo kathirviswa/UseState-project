@@ -4,7 +4,7 @@ const QrCode = () => {
       <div className="App-container">
         <div className="Input">
           <label htmlFor="dataInput" className="input-label">
-            Enter  generate QR Code
+            Enter a text to generate QR Code :
           </label>
           <input type="text"
             id="dataInput"
@@ -12,11 +12,7 @@ const QrCode = () => {
             placeholder="Enter Data for QR Code Number"
           />
      
-          <label htmlFor="dataInput" className="input-label">
-            Data for the QR Code :
-          </label>
-        
-  
+    
           <label htmlFor="dataInput" className="input-label">
             Size of the QR Code (in pixels e.g.,: 150) :
           </label>
