@@ -14,10 +14,11 @@ const QrCode = () => {
         SetLoading(true);  // setdefault in (setLoading = true)
         
         try {
-             
+           const url = " https://api.qrserver.com/v1/create-qr-code/?data=" 
+           setQrimg(url); 
         } 
         catch (error) {
-            console.error(error);
+            console.error("Error generating QR Code, " + error);
         } finally {
             SetLoading(false);  // set back to false when done
         }
