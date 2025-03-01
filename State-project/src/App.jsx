@@ -5,8 +5,12 @@ function App() {
   
 
   return (
-    
-    <QrCode />
+      <div className="box-border">
+        
+        <QrCode />
+      
+      </div>
+  
         
     
   )

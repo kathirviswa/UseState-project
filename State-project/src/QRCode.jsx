@@ -1,34 +1,49 @@
+import { useState } from "react";
+
 const QrCode = () => {
+
+     const [Scanner,setScanner] = useState("assets/scanner.png");
+
+    function generateQrCode(){
+        setScanner ("assets/Redmi.png");
+    }
     return (
-     <div className="App-container">
-      <img src= "./Qrcode.png"/>
+     <div className="App-container w-full h-screen flex flex-col  items-center justify-center">
+      <h1 className=" text-red-500 font-semibold text-[18px] underline p-[105px,0px] "> 
+        QR Code Generator
+      </h1>
+      <img src= {Scanner} className="QRimage p-1 shadow-2xl"/>
    <div>
-        <label htmlFor="dataInput" className="input-label">
+        <label htmlFor="dataInput" className="input-label  block mb-2 text-blue-300 text-[15px] font-medium">
             Enter a text to generate QR Code :
         </label>
         <input type="text"
             id="dataInput"
-            // className="input-field"
+            className="input-field p-3 mb-5 w-full text-[15px] border-2 border-blue-400"
             placeholder="Enter Data for QR Code Number"
         />
 
-   <label htmlFor="sizeInput" className="input-label">
+   <label htmlFor="sizeInput" className="input-label block mb-2 text-blue-300 text-[15px] font-medium ">
       Size of the QR Code (in pixels e.g.,: 150) : 
         </label>
         <input type="text"
             id="sizeInput"
-            // className="input-field"
+            className="input-field p-3 mb-5 w-full text-[15px] border-2 border-blue-400 "
             placeholder="Enter a Image Size"
         />
    
-   <button> Generate QR Cod </button>
-   <button> Download QR Code </button>
-
+   <button onClick={generateQrCode} className="generate-btn bg-blue-500 hover:bg-blue-400">Generate QR Cod </button>
+   <button className="downlode-btn bg-emerald-600 ml-3 hover:bg-green-400">Download QR Code </button>
+   
+   {/* Footer */}
+   <p className="footer mt-7.5  font-medium text-center">Designed By 
+    <span className="decoration-0 text-blue-500 "> Kathir</span>
+    </p>
    </div>
    </div>
     );
   };
-  
+
   export default QrCode;
   
 
