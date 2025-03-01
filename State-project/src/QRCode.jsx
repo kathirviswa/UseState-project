@@ -14,7 +14,7 @@ const QrCode = () => {
         SetLoading(true);  // setdefault in (setLoading = true)
         
         try {
-           const url = " https://api.qrserver.com/v1/create-qr-code/?data=" 
+           const url = "https://api.qrserver.com/v1/create-qr-code/?data=jos" 
            setQrimg(url); 
         } 
         catch (error) {
