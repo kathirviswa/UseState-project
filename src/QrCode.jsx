@@ -9,9 +9,8 @@ const QrCode = () => {
      const [qrData, setQrData] = useState("https://pickmydoc.vercel.app/"); 
      const [qrSize, setQrSize] = useState("150");
     
-    //  function generateQrCode(){
-    // // setQrimg ("public/Scanner.jpg");
-       
+    //   function generateQrCode(){
+    //  setQrimg ("public/Scanner.jpg");
     // }
       async function generateQrCode(){
         SetLoading(true);  // setdefault in (setLoading = true)
