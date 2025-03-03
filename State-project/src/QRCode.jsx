@@ -4,8 +4,9 @@ import { useState } from "react";
 const QrCode = () => {
 
      const [Qrimg, setQrimg] = useState("");
-     const [Loading, SetLoading] = useState(false); // boolean false
-    
+     const [Loading, SetLoading] = useState(false)//boolean
+     const [qrData, setQrData] = useState("https://pickmydoc.vercel.app/")
+    //  const [qrSize, setQrSize] = useState("150")
     //  function generateQrCode(){
     // // setQrimg ("public/Scanner.jpg");
        
@@ -14,7 +15,7 @@ const QrCode = () => {
         SetLoading(true);  // setdefault in (setLoading = true)
         
         try {
-           const url = "https://api.qrserver.com/v1/create-qr-code/?data=jos" 
+           const url = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(qrData)}`;
            setQrimg(url); 
         } 
         catch (error) {
@@ -33,13 +34,15 @@ const QrCode = () => {
     {Loading && < Loader className=" animate-spin "/> }
 
 {/* Having a Qrimage content automatically Render to  generated Qrimage...Noted Empty Usestate */}
-     {Qrimg && <img src= {Qrimg} className="QRimage p-2 shadow-md w-32 flex bg-amber-800 "/>}
+     {Qrimg && <img src= {Qrimg} className="QRimage p-2 shadow-md w-32 flex "/>}
    <div>
         <label htmlFor="dataInput" className="input-label  block mb-2 text-blue-300 text-[15px] font-medium pt-3">
             Enter a text to generate QR Code :
         </label>
         <input type="text"
             id="dataInput"
+            value={qrData}
+            onChange={(e) => setQrData(e.target.value)}
             className="input-field p-3 mb-5 w-full text-[15px] border-2 border-blue-400"
             placeholder="Enter Data for QR Code Number"
         />
@@ -95,4 +98,4 @@ const QrCode = () => {
   //   <Button type="submit" className="btn">
   //     Download QR Code
   //   </Button>
-  // </div>
+  //
